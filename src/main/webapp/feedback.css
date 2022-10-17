@@ -1,0 +1,281 @@
+@charset "ISO-8859-1";
+*{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: black;
+
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+h4{
+    text-align: center;
+}
+
+.content{
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+    text-align: center;
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
+  .main-container {
+    padding: 30px;
+  }
+  
+  /* HEADING */
+  
+  .heading {
+    text-align: center;
+  }
+  
+  .heading__title {
+    font-weight: 600;
+  }
+  
+  .heading__credits {
+    margin: 10px 0px;
+    color: #888888;
+    font-size: 25px;
+    transition: all 0.5s;
+  }
+  
+  .heading__link {
+    text-decoration: none;
+  }
+  
+  .heading__credits .heading__link {
+    color: inherit;
+  }
+  
+  /* CARDS */
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+  .card__link,
+  .card__exit,
+  .card__icon {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .card__link::after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+  }
+  
+  .card__link:hover::after {
+    width: 100%;
+  }
+  
+  .card__exit {
+    grid-row: 1/2;
+    justify-self: end;
+  }
+  
+  .card__icon {
+    grid-row: 2/3;
+    font-size: 30px;
+  }
+  
+  .card__title {
+    grid-row: 3/4;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .card__apply {
+    grid-row: 4/5;
+    align-self: center;
+  }
+  
+  /* CARD BACKGROUNDS */
+  
+  .card-1 {
+    background: radial-gradient(#1fe4f5, #3fbafe);
+  }
+  
+  .card-2 {
+    background: radial-gradient(#fbc1cc, #fa99b2);
+  }
+  
+  .card-3 {
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+  
+  .card-4 {
+    background: radial-gradient(#60efbc, #58d5c9);
+  }
+  
+  .card-5 {
+    background: radial-gradient(#f588d8, #c0a3e5);
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1600px) {
+    .cards {
+      justify-content: center;
+    }
+  }
+
+  
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background: radial-gradient(#76b2fe, #b69efe);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  
